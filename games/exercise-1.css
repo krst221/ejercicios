@@ -10,3 +10,6 @@
     border-radius: 10px;
     background-color: aquamarine;
 }
+.disable {
+    pointer-events: none;
+}

@@ -5,7 +5,9 @@ const baseUrl = 'http://localhost:3000/';
 
 createApp();
 function createApp() {
-    fetch(baseUrl + "planets").then(res => res.json()).then(planets => {
+    fetch(baseUrl + "planets")
+    .then(res => res.json())
+    .then(planets => {
         for (const planet of planets) {
             const planet$$ = document.createElement('div');
             
@@ -25,7 +27,9 @@ let actualCharacters = [];
 function getCharactersFilteredByPlanet(idPlanet){
     search$$.innerHTML = '';
     characters$$.innerHTML = '';
-    fetch(baseUrl + "characters?idPlanet=" + idPlanet).then(res => res.json()).then(characters => {
+    fetch(baseUrl + "characters?idPlanet=" + idPlanet)
+    .then(res => res.json())
+    .then(characters => {
         actualCharacters = characters;
         createSearch()
         printCharacters(characters)

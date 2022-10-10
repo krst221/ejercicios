@@ -1,5 +1,6 @@
 const tableBoardBody$$ = document.querySelector('[data-function="board"]');
 const attempts$$ = document.querySelector('[data-function="attempts"]');
+const high$$ = document.querySelector('[data-function="high"]');
 const imgXUrl = './public/exercise-4/x.png';
 const imgChestUrl = './public/exercise-4/chest.png';
 const imgSkullUrl = './public/exercise-4/skull.png';
@@ -32,12 +33,11 @@ function drawBoard() {
     }
 
 }
-
 function checkShot(img$$, i, j) {
     if (!gameIsOver) {
         attempts$$.textContent = Number(attempts$$.textContent) + 1;
-
         if (winnerCoor.x === i && winnerCoor.y === j) {
+            if(high$$.textContent === '-' || high$$.textContent > attempts$$.textContent) high$$.textContent = attempts$$.textContent;
             img$$.setAttribute('src', imgChestUrl);
             setTimeout(() => {
                 alert("Enhorabuena. Has ganados");

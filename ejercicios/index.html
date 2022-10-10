@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+  <head>
+	<meta charset="utf-8">
+	<title>Marvel Finder</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script type="text/javascript" src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="logo" onmouseover="over()" onmouseout="out()">
+      <img src="imgs/pngegg.png" alt="Marvel">
+    </div>
+    <div class="container">
+      <div class="finder">
+        <div class="finder__outer">
+          <div class="finder__inner">
+            <button onclick="searchMarvel()" class="finder__button" ref="finder__button"></button>
+            <input onkeyup="toUpperInput(this)" id="input-finder" class="finder__input" type="text" name="text" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

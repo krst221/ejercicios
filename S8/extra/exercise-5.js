@@ -55,6 +55,7 @@ const createAnwsers = (answers, correctAnswer, questionIndex) => {
 
 const markAnwser = (target, questionIndex) => {
     const allAnwsers = document.body.querySelectorAll("[data-answer='" + questionIndex + "'")
+    console.log(allAnwsers);
     for (const answer of allAnwsers) {
         answer.classList.remove("marked")
     }
